@@ -25,7 +25,7 @@ export 'src/auth/auth_io.dart'
 export 'src/client/call.dart' show CallOptions, ClientCall, MetadataProvider;
 export 'src/client/client.dart' show Client;
 export 'src/client/common.dart' show Response, ResponseStream, ResponseFuture;
-export 'src/client/connection.dart' show ConnectionState;
+export 'src/client/connection.dart' show ConnectionState ,ClientConnection ;
 export 'src/client/http2_channel.dart' show ClientChannel;
 export 'src/client/method.dart' show ClientMethod;
 export 'src/client/options.dart'
