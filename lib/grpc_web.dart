@@ -18,6 +18,8 @@ export 'src/auth/auth.dart'
 
 export 'src/client/call.dart' show MetadataProvider, CallOptions;
 
+export 'src/client/transport/xhr_transport.dart' ; 
+
 export 'src/client/common.dart' show Response, ResponseStream, ResponseFuture;
 
 export 'src/client/web_channel.dart' show GrpcWebClientChannel;
