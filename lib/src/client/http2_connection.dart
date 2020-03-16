@@ -23,15 +23,14 @@ import 'package:meta/meta.dart';
 import '../shared/timeout.dart';
 
 import 'call.dart';
-import 'connection.dart' hide ClientConnection;
-import 'connection.dart' as connection;
+import 'connection.dart';
 
 import 'options.dart';
 import 'transport/http2_credentials.dart';
 import 'transport/http2_transport.dart';
 import 'transport/transport.dart';
 
-class Http2ClientConnection implements connection.ClientConnection {
+class Http2ClientConnection implements ClientConnection {
   static final _methodPost = Header.ascii(':method', 'POST');
   static final _schemeHttp = Header.ascii(':scheme', 'http');
   static final _schemeHttps = Header.ascii(':scheme', 'https');
@@ -43,7 +42,7 @@ class Http2ClientConnection implements connection.ClientConnection {
 
   final ChannelOptions options;
 
-  connection.ConnectionState _state = ConnectionState.idle;
+  ConnectionState _state = ConnectionState.idle;
 
   @visibleForTesting
   void Function(Http2ClientConnection connection) onStateChanged;
